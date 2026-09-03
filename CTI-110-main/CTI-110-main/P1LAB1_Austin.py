@@ -11,12 +11,10 @@ print("Hello!")
 #print("what's your name?")
 first_name = input("what's your name?")
 
-# then say back the name
-print("Nice to meet you", first_name)
-
 # do the same thing for last_name
 last_name = input("what's your last name?")
 
 # then say back the name
 print("nice to meet you", first_name, last_name)
+
 
