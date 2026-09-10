@@ -6,7 +6,7 @@
 
 # Ask user to enter their budget
 print("This program calculates and displays travel expenses")
-budget = input("what is your Budget? ")
+budget = int(input("what is your Budget? "))
 
 # Ask user to enter travel destination
 destination = input("Enter your destination: ")
@@ -33,7 +33,7 @@ print("Food: ", food)
 print("expenses: ", expenses)
 
 # Subtract expenses from budget
-budget - expenses 
+balance = budget - expenses
 
 
 # Display results
