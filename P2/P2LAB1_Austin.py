@@ -6,6 +6,7 @@
 # 9/15/2026
 Get Radius, calculate and display radius, circumference, and area
 """
+PI = 3.14159 # Constant - do not change
 # Input -- get radius
 radius = float(input("what is the radius of the circle? "))
 
@@ -18,4 +19,4 @@ area = PI * radius * radius
 # Output -- .1f, .2f, .3f
 print(f"the diameter is {diameter:.1f}")
 print(f"the circumference is {circumference:.2f}")
-print(f"the radius is {radius:.3f}")
+print(f"the area is {area:.3f}")
