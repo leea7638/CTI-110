@@ -11,7 +11,7 @@ grade5 = float(input("Enter grade for module 5: "))
 grade6 = float(input("Enter grade for module 6: "))
 
 # put them all into a new list
-grade_list = [grade1, grade2, grade3, grade4, grade5, grade6]
+grade_list = grade1, grade2, grade3, grade4, grade5, grade6
 
 # do some calculations -- minimum, maximum, and average
 min_grade = min(grade_list)
@@ -26,8 +26,8 @@ average = total / count
 print("-------------------------------------")
 print(f"Grades: {grade_list}")
 print("----------------Results------------------")
-print(f"{"Lowest Grade:":<15} {min_grade:<15.1f}")
-print(f"{"Highest Grade:":<15} {max_grade:<15.1f}")
-print(f"{"Sum Of Grades:":<15} {total:<15.1f}")
-print(f"{"Average:":<15} {average:<15.2f}")
-print("-------------------------------------")
+print(f"{"Lowest Grade:":<25} {min_grade:<25.1f}")
+print(f"{"Highest Grade:":<25} {max_grade:<25.1f}")
+print(f"{"Sum Of Grades:":<25} {total:<25.1f}")
+print(f"{"Average:":<25} {average:<25.2f}")
+print("---------------------------------------------")
