@@ -34,8 +34,6 @@ print("That's", cents,"cents.")
 dollars = cents // 100
 cents   = cents % 100
 # if statement - dont show of zero, use singular or plural otherwise
-if dollars == 0:
-    pass
 if dollars == 1:
     print("1 dollar")
 if dollars > 1:
@@ -44,8 +42,6 @@ if dollars > 1:
 # quarters
 quarters = cents // 25
 cents    = cents % 25
-if quarters == 0:
-    pass
 if quarters == 1:
     print("1 quarter")
 if quarters > 1:
@@ -54,8 +50,6 @@ if quarters > 1:
 # Dimes
 dimes = cents // 10
 cents = cents % 10
-if dimes == 0:
-    pass
 if dimes == 1:
     print("1 dime")
 if dimes > 1:
@@ -64,8 +58,6 @@ if dimes > 1:
 # nickels
 nickels = cents // 5
 cents   = cents % 5
-if nickels == 0:
-    pass
 if nickels == 1:
     print("1 nickel")
 if nickels > 1:
@@ -74,8 +66,6 @@ if nickels > 1:
 # pennies
 pennies = cents // 1
 cents   = cents % 1
-if pennies == 0:
-    pass
 if pennies == 1:
     print("1 penny")
 if pennies > 1:
