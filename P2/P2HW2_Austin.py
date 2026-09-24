@@ -1,5 +1,7 @@
 # CTI 110
-# P2HW2 - just the setup
+# P2HW2 
+# Austin Lee
+# 9/24/2026
 
 # This example only uses three numbers, the full uses six.
 # get the grades
@@ -11,7 +13,7 @@ grade5 = float(input("Enter grade for module 5: "))
 grade6 = float(input("Enter grade for module 6: "))
 
 # put them all into a new list
-grade_list = grade1, grade2, grade3, grade4, grade5, grade6
+grade_list = [grade1, grade2, grade3, grade4, grade5, grade6]
 
 # do some calculations -- minimum, maximum, and average
 min_grade = min(grade_list)
