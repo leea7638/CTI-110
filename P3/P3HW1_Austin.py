@@ -16,7 +16,7 @@ mod_6 = float(input('Enter grade for Module 6: '))
 
 # add grades entered to a list
 
-grades = [mod_1, mod_2, mod_3, mod_4, mod_5]
+grades = [mod_1, mod_2, mod_3, mod_4, mod_5, mod_6]
 # TO DO: determine lowest, highest , sum and average for grades
 
 lowest_grade = min(grades)
