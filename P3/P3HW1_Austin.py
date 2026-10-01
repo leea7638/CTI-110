@@ -25,8 +25,6 @@ total = sum(grades)
 count = len(grades)
 avg = total / count
 
-# determine letter grade for average
-
 print("-------------------------------------")
 print(f"Grades: {grades}")
 print("----------------Results------------------")
@@ -35,6 +33,8 @@ print(f"{"Highest Grade:":<25} {highest_grade:<25.1f}")
 print(f"{"Sum Of Grades:":<25} {total:<25.1f}")
 print(f"{"Average:":<25} {avg:<25.2f}")
 print("---------------------------------------------")
+
+# determine letter grade for average
 
 if avg >= 90:
  print('Your grade is: A')
@@ -46,7 +46,3 @@ elif avg >= 60:
  print('Your grade is: D')
 else:
  print('Your grade is: F') # TO DO: finish this
-
-
-
-
