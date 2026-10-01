@@ -27,17 +27,25 @@ avg = total / count
 
 # determine letter grade for average
 
+print("-------------------------------------")
+print(f"Grades: {grades}")
+print("----------------Results------------------")
+print(f"{"Lowest Grade:":<25} {lowest_grade:<25.1f}")
+print(f"{"Highest Grade:":<25} {highest_grade:<25.1f}")
+print(f"{"Sum Of Grades:":<25} {total:<25.1f}")
+print(f"{"Average:":<25} {avg:<25.2f}")
+print("---------------------------------------------")
+
 if avg >= 90:
  print('Your grade is: A')
-if avg >= 80:
+elif avg >= 80:
  print('Your grade is: B')
-if avg >= 70:
+elif avg >= 70:
  print('Your grade is: C')
-if avg >= 60:
+elif avg >= 60:
  print('Your grade is: D')
 else:
  print('Your grade is: F') # TO DO: finish this
-
 
 
 
