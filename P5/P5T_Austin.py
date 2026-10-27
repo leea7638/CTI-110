@@ -33,8 +33,6 @@ def get_random_gold():
     gold = round(random.uniform(0.01, 100.00), 2)
     return gold
 
-
-
 def main():
     # hp_missing = int(input("Enter HP missing: "))
     # drink_potions(hp_missing)
