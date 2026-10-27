@@ -26,5 +26,5 @@ def main():
 
     print("Still missing:", hp_missing, "HP")
 
-    # start the program
-    main()
+# Start the program
+main()
