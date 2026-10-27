@@ -7,9 +7,11 @@
 # Run it now (it works). In P5T you turn it into a function.
 
 # PART ONE - ADD MAIN
-def main():
-    hp_missing = int(input("Enter HP missing: "))
+import random
 
+def drink_potions(hp_missing):
+    # input: hp_missing -> max healing possible
+    # output: prints potions used
     large = hp_missing // 25
     hp_missing = hp_missing % 25
     if large == 1:
@@ -25,6 +27,27 @@ def main():
         print(small, "Small Potions")
 
     print("Still missing:", hp_missing, "HP")
+
+def get_random_gold():
+    # returns a float -- how much gold was found
+    gold = round(random.uniform(0.01, 100.00), 2)
+    return gold
+
+
+
+def main():
+    # hp_missing = int(input("Enter HP missing: "))
+    # drink_potions(hp_missing)
+    max_hp = int(input("What is your max HP? "))
+    hp = random.randint(1, max_hp)
+    print(f"A goblin hits you. You have {hp} HP left.")
+    hp_missing = max_hp - hp
+    print(f"You are missing {hp_missing} HP.")
+    drink_potions(hp_missing)
+
+    # get random gold
+    gold = get_random_gold()
+    print(f"You find {gold:.2f} gold in the chest.")
 
 # Start the program
 main()
