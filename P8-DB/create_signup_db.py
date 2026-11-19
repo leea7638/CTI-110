@@ -1,3 +1,8 @@
+# CTI-110
+# Austin Lee
+# 11/19/2026
+# My version of DHW1
+
 import sqlite3
 
 # Connect to SQLite database file (creates file if it doesn't exist)
@@ -18,6 +23,14 @@ cursor.execute("DROP TABLE IF EXISTS users")
 cursor.execute("""
 CREATE TABLE users (
     user_id INTEGER PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT,
+    email TEXT,
+    username TEXT,
+    password_hash TEXT,
+    signup_date DATE,
+    country TEXT,
+    age INTEGER
 )""")
 
 # STEP 2: Insert sample fake users
@@ -26,7 +39,16 @@ CREATE TABLE users (
 # Each user has 8 values, in this order (user_id is NOT included):
 # first_name, last_name, email, username, password_hash, signup_date, country, age
 
-users = [('Naruto', 'Uzamaki', 'ramen@example.com', 'naruto_u', 'LoveRamen1', '2026-06-01', 'JAPAN', 16),]
+users = [('Naruto', 'Uzamaki', 'ramen@example.com', 'naruto_u', 'LoveRamen1', '2026-06-01', 'JAPAN', 16),
+    ('Rick', 'Sanchez', 'rick.sanchez@example.com', 'PortalRick', 'RickPortal123', '2024-01-15', 'USA', 70),
+    ('Morty', 'Smith', 'morty.smith@example.com', 'MortyAdventures', 'MortyAdventure14', '2024-02-20', 'USA', 14),
+    ('Peter', 'Griffin', 'peter.griffin@example.com', 'BigPGriffin', 'ChickenFight45', '2024-03-10', 'USA', 45),
+    ('Stewie', 'Griffin', 'stewie.griffin@example.com', 'EvilGenius', 'WorldDomination1', '2024-04-05', 'USA', 1),
+    ('Stan', 'Smith', 'stan.smith@example.com', 'CIAStan', 'CIAAgent2024', '2024-05-12', 'USA', 42),
+    ('Eric', 'Cartman', 'eric.cartman@example.com', 'CartmanRules', 'RespectMyAuthoritah', '2024-06-18', 'USA', 10),
+    ('BoJack', 'Horseman', 'bojack.horseman@example.com', 'BoJack2024', 'HollywooStar50', '2024-07-22', 'USA', 50),
+    ('Bender', 'Rodriguez', 'bender.rodriguez@example.com', 'BendingUnit22', 'BiteMyShinyMetal', '2024-08-14', 'USA', 4),
+    ('Bob', 'Belcher', 'bob.belcher@example.com', 'BurgerBob', 'BurgerOfTheDay', '2024-09-30', 'USA', 46)]
 
 
 #------------------------------------------------------------------------------------

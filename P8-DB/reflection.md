@@ -9,29 +9,29 @@ After you run `run_queries.py`, review your output and answer the questions belo
 How many total rows (users) are displayed in your output?  
 Does this match the number of users you intended to insert?
 
-# ANSWER: 
+# ANSWER: 10, yes this is all of the users i intended to add.
 
 ## 2) Name + Email (`SELECT first_name, last_name, email FROM users`)
 What information is shown in this query that is different from Query #1?  
 
-# ANSWER:
+# ANSWER: First Name, Last Name, and Email
 
 ## 3) Users from USA (`WHERE country = 'USA'`)
 How many users from the USA appear in your results? (The answer can be 0 if none of your users have country 'USA'.)
 
-# ANSWER:
+# ANSWER: 9
 
 ## 4) Total User Count (`COUNT(*)`)
 What value did your `total_users` query return?  
 How can this query help you check whether your data was inserted correctly?
 
-# ANSWER:
+# ANSWER: 10, it can help you understand how many users were intered into the query.
 
 ## 5) 3 Most Recent Signups (`ORDER BY signup_date DESC LIMIT 3`)
 Which 3 usernames appear as the most recent in **your** output?  
 
-# ANSWER: 
+# ANSWER: naruto_u, BurgerBob, and BendingUnit22
 
 ---
 
-> What should be in your zipped folder when you turn it in to Canvas -> create_signup_db.py, run_queries.py, signup_hw.db, and reflection.md
+> What should be in your zipped folder when you turn it in to Canvas -> create_signup_db.py, run_queries.py, signup_hw.db, and reflection.md
