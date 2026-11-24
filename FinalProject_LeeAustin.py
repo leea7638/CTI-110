@@ -10,25 +10,25 @@ import random
 # CHARACTER DATA
 characters = {
     "1": {
-        "name": "Knight",
+        "name": "Enforcer",
         "luck": 10,
         "strength": 90,
         "magic": 20
     },
     "2": {
-        "name": "Rogue",
+        "name": "Robber",
         "luck": 80,
         "strength": 40,
         "magic": 30
     },
     "3": {
-        "name": "Wizard",
+        "name": "Chemist",
         "luck": 60,
         "strength": 20,
         "magic": 90
     },
     "4": {
-        "name": "Ranger",
+        "name": "Freelancer",
         "luck": 65,
         "strength": 65,
         "magic": 40
@@ -37,15 +37,15 @@ characters = {
 
 # TREASURE CHESTS
 treasures = [
-    ("Wooden Chest", 50, 70),
-    ("Silver Chest", 100, 150),
-    ("Golden Chest", 200, 300),
-    ("Legendary Chest", 500, 1000)
+    ("Lockbox", 50, 100),
+    ("Strongbox", 300, 550),
+    ("Security Safe", 700, 1000),
+    ("Bank Vault", 5000, 10000)
 ]
 
 # CHARACTER SELECTION
 print("================================")
-print("     TREASURE CHEST QUEST")
+print("     Safe Escape")
 print("================================")
 
 print("\nChoose your character:")
@@ -70,18 +70,18 @@ print("Strength:", player["strength"])
 print("Magic:", player["magic"])
 
 # GAME VARIABLES
-gold = 0
-chests_opened = 0
+cash = 0
+safes_opened = 0
 
 # GAME LOOP
-while chests_opened < 5:
+while safes_opened < 5:
 
     print("\n==============================")
-    print("A treasure chest appears!")
+    print("you find a Random Safe")
     print("==============================")
 
-    print("1. Open the chest")
-    print("2. Skip the chest")
+    print("1. Open the safe")
+    print("2. Skip the safe")
     print("3. View your stats")
     print("4. Quit game")
 
@@ -90,48 +90,48 @@ while chests_opened < 5:
     if action == "1":
 
         # Select random chest
-        chest = random.choice(treasures)
+        safe = random.choice(cash)
 
-        chest_name = chest[0]
-        min_gold = chest[1]
-        max_gold = chest[2]
+        safe_name = safe[0]
+        min_cash = safe[1]
+        max_cash = safe[2]
 
-        print(f"\nYou found a {chest_name}!")
+        print(f"\nYou found a {safe_name}!")
 
         # Character performance bonus
         bonus = player["luck"] / 100
 
-        if player["name"] == "Knight":
+        if player["name"] == "Enforcer":
             bonus += player["strength"] / 500
 
-        elif player["name"] == "Wizard":
+        elif player["name"] == "Chemist":
             bonus += player["magic"] / 500
 
-        elif player["name"] == "Rogue":
+        elif player["name"] == "Raider":
             bonus += player["luck"] / 200
 
-        elif player["name"] == "Ranger":
+        elif player["name"] == "Freelancer":
             bonus += player["strength"] / 500
 
         # Calculate treasure reward
-        reward = random.randint(min_gold, max_gold)
+        reward = random.randint(min_cash, max_cash)
 
         reward = int(reward * (1 + bonus))
 
-        gold += reward
-        chests_opened += 1
+        cash += reward
+        safes_opened += 1
 
         print("\nCongratulations!")
-        print(f"You earned {reward} gold!")
+        print(f"You earned {reward} dollars!")
 
     elif action == "2":
-        print("You skipped the chest.")
+        print("You skipped the safe.")
 
     elif action == "3":
         print("\nPLAYER STATS")
         print("Character:", player["name"])
-        print("Gold:", gold)
-        print("Chests opened:", chests_opened)
+        print("Cash:", cash)
+        print("Safes opened:", safes_opened)
 
     elif action == "4":
         print("\nThanks for playing!")
@@ -141,14 +141,37 @@ while chests_opened < 5:
         print("Invalid option!")
         continue
 
-    if chests_opened == 5:
-        print("\nYou opened all 5 treasure chests!")
+    if safes_opened == 5:
+        print("\nYou opened all 5 safes!")
+
+def open_chest(character):
+
+    print(f"\n{character} approaches the safe...")
+
+    if character == "Robber":
+        print("You disarm the security alarm.")
+        print("You safely collect the cash.")
+
+    elif character == "Chemist":
+        print("You geiger counter detects fissle material.")
+        print("the alarm activates, releasing a poisoness gas.")
+        print("you are protected from the gas with your chem suit.")
+
+    elif character == "Enforcer":
+        print("You force the safe open!")
+        print("The alarm activates and gunshot goes off.")
+        print("you got hit but your body armor protects you.")
+
+    else:
+        print("You open the safe...")
+        print("the alarm goes off and a gunshot goes off.")
+        print("Your health is now 25% wer.")
 
 # FINAL SCORE
 print("\n==============================")
 print("         GAME OVER")
 print("==============================")
 print("Character:", player["name"])
-print("Total Gold:", gold)
-print("Chests Opened:", chests_opened)
+print("Total Cash:", cash)
+print("Safes Opened:", safes_opened)
 print("==============================")
